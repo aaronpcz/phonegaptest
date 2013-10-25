@@ -9,6 +9,26 @@
 	<link rel="stylesheet" href="file://js/jquery.mobile-1.3.2.min.css" />
 	<script text="text/javascript" src="file://js/jquery.js"></script>
 	<script text="text/javascript "src="file://js/jquery.mobile-1.3.2.min.js"></script>
+	
+	<script>
+       var deviceReadyDeferred = $.Deferred();
+       var jqmReadyDeferred = $.Deferred();
+       document.addEventListener("deviceReady", deviceReady, false);
+
+       function deviceReady() {
+          deviceReadyDeferred.resolve();
+       }
+
+       $(document).one("pageinit", function () {
+          jqmReadyDeferred.resolve();
+       });
+
+       $.when(deviceReadyDeferred, jqmReadyDeferred).then(doWhenBothFrameworksLoaded);
+
+       function doWhenBothFrameworksLoaded() {
+          //All my application logic goes here
+
+       }
 </head> 
 
 <body> 
