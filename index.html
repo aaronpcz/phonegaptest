@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<title>Multi-page template</title> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<link rel="stylesheet" href="file:///js/jquery.mobile-1.3.2.min.css" />
 	<script src="file:///js/jquery.js"></script>
 	<script src="file:///js/jquery.mobile-1.3.2.min.js"></script>
 </head> 
@@ -22,6 +22,14 @@
 
 	<div data-role="content" >	
 		<h2>One</h2>
+		
+	<ul data-role="listview" data-inset="true" data-filter="true">
+		<li><a href="#">Acura</a></li>
+		<li><a href="#">Audi</a></li>
+		<li><a href="#">BMW</a></li>
+		<li><a href="#">Cadillac</a></li>
+		<li><a href="#">Ferrari</a></li>
+	</ul>
 		
 		<h3>Show internal pages:</h3>
 		<p><a href="#two" data-role="button">Show page "two"</a></p>	
